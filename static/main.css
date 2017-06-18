@@ -7,13 +7,20 @@ main {
     height: auto;
     width: 260px;
     margin: 40px auto;
-    border-radius: 5px; }
+    border-radius: 5px;
+    transition: all 0.2s ease-in; }
     main .container--default {
       border: 3px solid black;
       background-color: white; }
     main .container--thank-you {
       border: 3px solid #3cc700;
       background-color: #d9f5ca; }
+      main .container--thank-you .edition-chosen {
+        display: block !important; }
+      main .container--thank-you .edition-choices {
+        display: none !important; }
+      main .container--thank-you .thank-you-text {
+        display: block !important; }
     main .container .edition-chosen {
       display: none;
       color: #3cc700;
