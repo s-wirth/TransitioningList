@@ -8,17 +8,39 @@ main {
     height: auto;
     width: 260px;
     margin: 40px auto;
-    border: 3px solid black;
     border-radius: 5px;
 
-    .buy-button {
+    &--default {
+      border: 3px solid black;
+      background-color: white;
+    }
+
+    &--thank-you {
+      border: 3px solid #3cc700;
+      background-color: #d9f5ca;
+    }
+
+    .edition-chosen {
+      display: none;
+      color: #3cc700;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .buy-button,
+    .thank-you-text {
       width: 100%;
-      background: white;
       padding-top: 10px;
       padding-bottom: 10px;
       margin-top: 20px;
       text-transform: uppercase;
       font-weight: 700;
+    }
+
+    .buy-button {
+      background: white;
       border-color: black;
       border-width: 2px 0 0 0;
       border-style: solid;
@@ -28,6 +50,15 @@ main {
       &:hover {
         background: #dedede;
       }
+    }
+
+    .thank-you-text {
+      position: absolute;
+      bottom: 0;
+      display: none;
+      color: white;
+      background: #3cc700;
+      text-align: center;
     }
   }
 
@@ -106,8 +137,9 @@ main {
         color: #ffffff;
       }
 
-      .background {
-        background: #a1a1a1;
+
+      input[type=radio]:not(:checked) ~ .background {
+        background-color: #a1a1a1;
       }
     }
 

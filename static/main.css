@@ -7,16 +7,30 @@ main {
     height: auto;
     width: 260px;
     margin: 40px auto;
-    border: 3px solid black;
     border-radius: 5px; }
-    main .container .buy-button {
+    main .container--default {
+      border: 3px solid black;
+      background-color: white; }
+    main .container--thank-you {
+      border: 3px solid #3cc700;
+      background-color: #d9f5ca; }
+    main .container .edition-chosen {
+      display: none;
+      color: #3cc700;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 40px;
+      margin-bottom: 40px; }
+    main .container .buy-button,
+    main .container .thank-you-text {
       width: 100%;
-      background: white;
       padding-top: 10px;
       padding-bottom: 10px;
       margin-top: 20px;
       text-transform: uppercase;
-      font-weight: 700;
+      font-weight: 700; }
+    main .container .buy-button {
+      background: white;
       border-color: black;
       border-width: 2px 0 0 0;
       border-style: solid;
@@ -24,6 +38,13 @@ main {
       -webkit-transition: background 0.25s linear; }
       main .container .buy-button:hover {
         background: #dedede; }
+    main .container .thank-you-text {
+      position: absolute;
+      bottom: 0;
+      display: none;
+      color: white;
+      background: #3cc700;
+      text-align: center; }
   main .container ul {
     list-style: none;
     margin: 0;
@@ -83,8 +104,8 @@ main {
       -webkit-transition: all 0.25s linear; }
     main .container ul li:hover label {
       color: #ffffff; }
-    main .container ul li:hover .background {
-      background: #a1a1a1; }
+    main .container ul li:hover input[type=radio]:not(:checked) ~ .background {
+      background-color: #a1a1a1; }
     main .container ul .background {
       position: absolute;
       display: block;
