@@ -1,3 +1,90 @@
-
+main {
+  width: 100%;
+  height: 100%; }
+  main .container {
+    display: block;
+    position: relative;
+    height: auto;
+    width: 260px;
+    margin: 40px auto;
+    border: 3px solid black;
+    border-radius: 5px; }
+  main .container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto; }
+    main .container ul:first-child {
+      margin-top: 20px; }
+    main .container ul li {
+      display: block;
+      position: relative;
+      height: 100%;
+      margin: 5px 20px;
+      border: 2px solid black;
+      border-radius: 5px; }
+      main .container ul li .check {
+        display: block;
+        position: absolute;
+        border: 2px solid black;
+        border-radius: 5px;
+        background: white;
+        height: 25px;
+        width: 25px;
+        top: 10px;
+        left: 10px;
+        z-index: 5;
+        transition: border .25s linear;
+        -webkit-transition: border .25s linear; }
+        main .container ul li .check::before {
+          display: block;
+          position: absolute;
+          content: '';
+          height: 15px;
+          width: 15px;
+          transform: rotate(130deg);
+          top: 5px;
+          left: 5px;
+          margin: auto;
+          transition: background 0.25s linear;
+          -webkit-transition: background 0.25s linear; }
+    main .container ul li input[type=radio] {
+      position: absolute;
+      visibility: hidden; }
+    main .container ul li label {
+      color: #292929;
+      text-transform: uppercase;
+      display: block;
+      position: relative;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 300;
+      font-size: 15px;
+      padding: 15px 25px 15px 60px;
+      margin: 0 auto;
+      z-index: 9;
+      cursor: pointer;
+      -webkit-transition: all 0.25s linear; }
+    main .container ul li:hover label {
+      color: #ffffff; }
+    main .container ul li:hover .background {
+      background: #a1a1a1; }
+    main .container ul .background {
+      position: absolute;
+      display: block;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      transition: background 0.25s linear;
+      -webkit-transition: background 0.25s linear; }
+  main input[type=radio]:checked ~ .check {
+    border: 2px solid white; }
+  main input[type=radio]:checked ~ .check::before {
+    background: black; }
+  main input[type=radio]:checked ~ label {
+    color: #ffffff; }
+  main input[type=radio]:checked ~ .background {
+    background-color: black; }
 
 /*# sourceMappingURL=main.css.map */
